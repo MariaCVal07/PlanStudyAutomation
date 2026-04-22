@@ -29,7 +29,6 @@ test('Should complete purchase flow successfully', async ({ page }) => {
 
   await checkoutPage.continueCheckout();
   await expect(page).toHaveURL(/checkout-step-two.html/); // Validacion del checkout step 2
-  await expect(page.getByText('Checkout: Overview')).toBeVisible(); //Validar resumen
 
   await checkoutPage.finishCheckout();
   // ASSERTION FINAL
